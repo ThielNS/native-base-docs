@@ -46,7 +46,7 @@ import PageTwo from './pageTwo';
 export default class App extends Component {
   render() {
     return (
-      &lt;Router hideNavBar= "true">
+      &lt;Router hideNavBar={true}>
         &lt;Scene key="root">
           &lt;Scene key="pageOne" component={PageOne} title="PageOne" initial={true} />
           &lt;Scene key="pageTwo" component={PageTwo} title="PageTwo" />
@@ -90,8 +90,8 @@ export default class pageOne extends Component {
               &lt;/Body>
             &lt;/CardItem>
           &lt;/Card>
-          &lt;Button dark bordered style = alignSelf: 'center', margin: 30}}
-            onPress= {() => {Actions.pageTwo(); }}>
+          &lt;Button dark bordered style={{alignSelf: 'center', margin: 30}}
+            onPress= {() => {Actions.pageTwo()}}>
             &lt;Text>Goto Page 2&lt;/Text>
           &lt;/Button>
          &lt;/Content>
@@ -129,7 +129,7 @@ export default class pageTwo extends Component {
             &lt;/CardItem>
           &lt;/Card>
           &lt;Button dark bordered
-            onPress= {() => {Actions.pop(); }}>
+            onPress= {() => {Actions.pop()}}>
             &lt;Text>Goto Page 1&lt;/Text>
          &lt;/Button>
         &lt;/Content>
